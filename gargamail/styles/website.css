@@ -1,0 +1,345 @@
+/*--------------OBLIKOVANJE-STRANI---------------*/
+/*Barva, font ter postavitev strani*/
+body{
+    background-color: rgba(114, 134, 160, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+/*velikost strani*/
+html,body {
+    height:99.125%;
+}
+
+/*zamik cele strani*/
+.main{
+    padding: 1% 0 1% 0;
+    gap: 1em;
+    flex: 10;
+}
+/*IKONE*/
+.fa{
+    color: rgb(252, 252, 252);
+}
+/*-----------------------------------------------*/
+
+
+
+
+/*-LOGO-&-LOGOUT-&-LISTANJE-&---------------------
+GUMB-ZA-ODPIRANJE-MAILOV-&-ISKALEC----------------*/
+/*
+Postavitev LOGO-ta, LOGOUTA, gumbov ter iskalca
+vodoravno
+*/
+
+#Gumbi{
+    display: flex;
+}
+
+.phone{
+    display: flex;
+    flex: 4.5;
+}
+
+.phone2{
+    display: flex;
+    flex: 2;
+}
+
+.profile{
+    flex: 1;
+}
+
+.search{
+    flex: 5;
+}
+
+.logout{
+    flex: 1;
+}
+
+.top{
+    display: flex;
+}
+
+/*Oblikovanje iskalca*/
+.search{
+    padding: 0 1% 1% 1%;
+    gap: 1em;
+    flex: 10;
+    font-size: 2em;
+    text-align: center;
+    margin-left: 1em;
+    width: 100%;
+}
+#bar{
+    border: 0;
+    border-radius: 3em;
+    width: 80%;
+    padding: 1em;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+/*Oblikovanje LOGO-ta*/
+img{
+    width: 20em;
+}
+/*oblikovanje prostora okoli LOGO-ta*/
+.profile{
+    margin: 0.25% 0 0.25% 0.8%;
+    flex: 1;
+    text-align: center;
+}
+
+/*Log Out gumb in napis Signed in with: */
+.logout{
+    padding: 0.3em;
+    display: flex;
+    
+}
+
+.logoutBtn{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 10em;
+    transition: all 300ms;
+    padding: 0.3em;
+    margin: 0.4em 0 0 0;
+    font-size: 1.5em;
+}
+
+.logoutBtn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(163, 191, 168, 1);
+}
+
+#SignedIn{
+    margin: 1em;
+}
+
+
+/*Gumba za spreminjanje strani*/
+.PreviousPage{
+    margin-left: 3em;
+}
+
+/*
+Gumb za odpiranje menija za pošiljanje mailov
+ter gumba za listanje strani 
+*/
+.Send, .PreviousPage, .NextPage{
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 300ms;
+    border-radius: 2em;
+    border: 0;
+    margin-top: 0.75em;
+    height: 3em;
+}
+
+
+.Send:hover, .PreviousPage:hover, .NextPage:hover{
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(163, 191, 168, 1);
+}
+
+.Send{
+    margin-left: 3em;
+}
+/*-----------------------------------------------*/
+
+
+
+/*-------GLAVNI-DEL-&-OBLIKOVANJE-MAILOv---------*/
+/*kontejner vseh mailov skupaj*/
+.container{
+    font-size: 1.5em;
+    margin: 0.5% 0.8% 0.5% 0.8%;
+}
+
+/*Vsak posamezni mail*/
+.content{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    padding: 0 0 0 0.5em;
+    margin-bottom: 0.4em;
+    color: #f8fafc;
+    transition: .5s ease;
+    display: none;
+    height: 3.4em;
+    font-size: 0.98em;
+    
+}
+
+.content:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(163, 191, 168, 1);
+}
+
+/*Oblika pošiljatelja*/
+.ime{
+    color: #f8fafc;
+    font-weight: bold;
+    padding: 1em 0.5em 1em 0;
+    border-right: rgba(114, 134, 160, 1) 2px solid;
+    margin: 0;
+    width: 20%;
+}
+
+/*Postavitev zadeve*/
+.zadeva{
+    flex: 1;
+    padding: 1em 0 1em 0.5em;
+    margin: 0;
+}
+
+/*Postavitev datuma na desno stran*/
+.datum{
+    flex: 1;
+    text-align: right;
+    padding: 1em 0.5em 1em 0;
+    margin: 0;
+}
+
+/*
+Črta za razdelitev podatkov o pošiljatelju/zadevi 
+ter vsebini maila
+*/
+.seperate{
+    border-bottom: rgba(114, 134, 160, 1) 2px solid;
+}
+
+/*
+Gumb za zapiranje posameznega maila
+ter gumb za odpiranje menija za odgovarjanje
+*/
+.goBack, .Reply{
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 300ms;
+    border-radius: 10px;
+    border: 0;
+    color: rgba(252,252,252,1);
+}
+
+.goBack:hover, .Reply:hover{
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(163, 191, 168, 1);
+}
+/*-----------------------------------------------*/
+
+
+
+/*-------------MENI-ZA-POŠILJANJE-MAILOV-----------------*/
+/*oblika menija za pošiljanje mailov*/
+.messages{
+    padding: 1%;
+    flex: 1;
+    background-color: rgba(163, 191, 168, 1);
+    width: 37.8vw;
+    height: 47.3vh;
+}
+
+/*Polja za prejemnika, CC in zadevo*/
+.prejemnik, .CarbonCopy, .subject{
+    border: 0;
+    width: 98%;
+    padding: 1%;
+    margin: 0;
+}
+
+.prejemnik, .CarbonCopy{
+    border-bottom: rgba(163, 191, 168, 1) 1px solid;
+}
+
+/*Polje za tekst pri pošiljanju maila*/
+textarea{
+    height: 20em;
+    width: 99%;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*Gumb za pošiljanje mailov*/
+.posljiMail{
+    padding: 0.4em;
+    margin: 1em 1em 1em 0;
+    background-color: #f8fafc;
+    transition: all 300ms;
+    border-radius: 10px;
+    border: 0;
+}
+.posljiMail:hover{
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*-----------------------------------------------*/
+
+
+
+
+/*---------------TELEFON---------------------------*/
+
+
+
+@media screen and (max-width: 650px) {
+    .content{
+        height: 6.15em;
+        font-size: 0.5em;
+    }
+
+    .ime{
+        width: 38%;
+    }
+
+    .top{
+        display: block;
+    }
+
+    .Send{
+        margin-left: 10px;
+    }
+
+    .datum{
+        display: none;
+    }
+    
+    img{
+        width: 5em;
+    }
+
+    .profile{
+        margin: 0;
+        width: 5em;
+        flex: 2;
+    }
+
+    #SignedIn{
+        display: none;
+    }
+
+    .logoutBtn{
+        margin: 0.15em;
+    }
+
+    #Gumbi{
+        flex: 3;
+    }
+
+    .logout{
+        width: 1em;
+    }
+
+    .messages{
+        width: 117.4%;
+    }
+
+}
+
+@media screen and (max-width: 1500) {
+    
+}
+
+
